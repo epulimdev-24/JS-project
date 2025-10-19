@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center">
+    <div class="row ">
+      <div class="col-12 col-sm-9 col-md-6 gap-3">
+        <!-- Q1 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 1</h3>
+          <input type="text" placeholder="Place your Text Here" id="userText">
+          <button class="btn bg-success text-light" onclick="convert()">Convert</button>
+          <div id="lowerCase">Your converted text will show here</div>
+        </div>
+        <!-- Q2 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 2</h3>
+          <textarea type="text" placeholder="Place your Essay Here" id="essay"></textarea>
+          <button class="btn bg-success text-light" onclick="removeExtraSpaces()">Remove Extra Spaces</button>
+          <div id="formattedText">Your formatted essay will show here</div>
+        </div>
+        <!-- Q3 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 3</h3>
+          <input type="number" placeholder="No of items" id="discount">
+          <button class="btn bg-success text-light" onclick="discounted()">Check</button>
+          <div id="showDiscount">Your eligibility will show here</div>
+        </div>
+        <!-- Q4 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 4</h3>
+          <input type="number" placeholder="Check Temp. Degree" id="Degree">
+          <button class="btn bg-success text-light" onclick="temp()">Check</button>
+          <div id="weather">See temperature status here</div>
+        </div>
+        <!-- Q5 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 5</h3>
+          <h3>Know your weight status</h3>
+          <input type="number" placeholder="Height (in metres)" id="height">
+          <input type="number" placeholder="weight (in kilograms)" id="weight">
+          <button onclick="checkBMI()" class="btn bg-success text-light">Check</button>
+          <div id="BMIvalue">Your BMI value here...</div>
+          <div id="showStatus">Check your condition here</div>
+        </div>
+        <!-- Q6 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 6</h3>
+          <input type="text" placeholder="Enter your username" id="username">
+          <button onclick="crossCheckUsernames()" class="btn bg-success text-light">Enter</button>
+          <div id="usernameStatus"></div>
+        </div>
+        <!-- Q7 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 7</h3>
+          <input type="number" placeholder="Weight" id="luggage">
+          <button class="btn bg-success text-light" onclick="checkWeight()">Check</button>
+          <div id="luggageSize">See weight status here</div>
+        </div>
+        
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+</html>
