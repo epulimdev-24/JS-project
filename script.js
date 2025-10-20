@@ -5,7 +5,7 @@ const convert = () => {
 
 }
 
-const removeExtraSpaces = () => { 
+const removeExtraSpaces = () => {
   const formattedEssay = essay.value.trim().replace(/\s+/g, " ");
   formattedText.innerHTML = formattedEssay;
 }
@@ -70,7 +70,7 @@ const crossCheckUsernames = () => {
 const checkWeight = () => {
   if (luggage.value == '') {
     alert('Fill in th empty space')
-    
+
   } else {
     console.log(luggage.value);
     if (luggage.value <= 20) {
@@ -80,6 +80,77 @@ const checkWeight = () => {
     } else if (luggage.value >= 30) {
       luggageSize.innerHTML = "Overweight"
     }
+  }
+}
+
+const checkMail = () => {
+  if (mail.value == '') {
+    alert('Fill in the empty space')
+  } else if ((mail.value.endsWith('@oauife.edu.ng'))) mailStatus.textContent = 'Valid Username';
+  else mailStatus.textContent = 'Invalid Username. Use only emails assigned by the school and ends with @oauife.edu.ng'
+}
+
+const checkGrade = () => {
+  if (grade.value == '') {
+    alert('Fill in the empty space')
+  } else if (grade.value <= 39) {
+    gradeStatus.textContent = 'Grade F(Fail)';
+  } else if (grade.value > 39 && grade.value <= 49) {
+    gradeStatus.textContent = 'Grade D(pass)';
+  } else if (grade.value > 49 && grade.value <= 59) {
+    gradeStatus.textContent = 'Grade C(good)';
+  } else if (grade.value > 59 && grade.value <= 69) {
+    gradeStatus.textContent = 'Grade B(very good)';
+  } else if (grade.value > 69 && grade.value <= 100) {
+    gradeStatus.textContent = 'Grade A(Excellent)';
+  } else {
+    gradeStatus.textContent = "Wrong Input"
+  }
+
+}
+
+const checkPrice = () => {
+  if (price.value == '') {
+    alert('Fill in the empty space')
+  } else if (price.value < 5000) {
+    finalPrice.textContent = "No Discount"
+  } else if (price.value >= 5000 && price
+    .value <= 10000
+  ) {
+    let discountedPrice = price.value - (price.value * 0.05)
+    finalPrice.textContent = discountedPrice
+
+  } else if (price.value > 10000 && price
+    .value <= 20000
+  ) {
+    let discountedPrice = price.value - (price.value * 0.1)
+    finalPrice.textContent = discountedPrice
+
+  } else if (price
+    .value > 20000
+  ) {
+    let discountedPrice = price.value - (price.value * 0.15)
+    finalPrice.textContent = discountedPrice
+
+  }
+}
+
+const checkEligibility = () => {
+  const marks = jambScore.value;
+  const course = courseSelect.value;
+  console.log(course);
+
+  if (marks == '' && course == '') {
+    alert('Fill in the empty spaces')
+  } else if (courseSelect.value = "Medicine") cutoff = 200;
+  else if (courseSelect.value = "Engineering") cutoff = 250;
+  else if (courseSelect.value = "Sciences") cutoff = 220;
+  else if (courseSelect.value = "Arts") cutoff = 280;
+
+  if (marks >= cutoff) {
+    eligibilityResult.textContent = `Your score is ${marks}.You are eligible for ${course}`
+  } else {
+    eligibilityResult.textContent = `Your score is ${marks}.You are not eligible for ${course}`
   }
 }
 

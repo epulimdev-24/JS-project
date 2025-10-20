@@ -65,8 +65,40 @@
           <button class="btn bg-success text-light" onclick="checkWeight()">Check</button>
           <div id="luggageSize">See weight status here</div>
         </div>
-        
-
+        <!-- Q8 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 8</h3>
+          <input type="email" placeholder="Your email" id="mail">
+          <button class="btn bg-success text-light" onclick="checkMail()">Check</button>
+          <div id="mailStatus">See mail status here</div>
+        </div>
+        <!-- Q9 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 9</h3>
+          <input type="number" placeholder="Your score" id="grade" min="0" max="100">
+          <button class="btn bg-success text-light" onclick="checkGrade()">Check</button>
+          <div id="gradeStatus">See mail status here</div>
+        </div>
+        <!-- Q10 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 10</h3>
+          <input type="number" placeholder="Purchase price" id="price" >
+          <button class="btn bg-success text-light" onclick="checkPrice()">Check Discount</button>
+          <div id="finalPrice">See discounted price here</div>
+        </div>
+        <!-- Q11 -->
+        <div class="card p-3 gap-2 d-flex" style="width: 20rem;">
+          <h3>Question 11</h3>
+          <input type="number" placeholder="JAMB Score" id="jambScore" class="form-control" >
+          <select name="" id="courseSelect">
+            <option value="Medicine" selected>Medicine</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Sciences">Sciences</option>
+            <option value="">Art</option>
+          </select>
+          <button class="btn bg-success text-light" onclick="checkEligibility()">Check Discount</button>
+          <div id="eligibilityResult">...</div>
+        </div>
 
       </div>
     </div>
